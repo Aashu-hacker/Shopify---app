@@ -160,28 +160,7 @@ export default function HomePage() {
   const { selectedResources, allResourcesSelected, handleSelectionChange } =
     useIndexResourceState(user);
 
-  // const rowMarkup = saveData?.map(
-  //   ({ id, title,  price, discountPercentage ,category,rating,stock,brand}, index) => (
-  //     <IndexTable.Row
-  //       id={id}
-  //       key={id}
-  //       selected={selectedResources.includes(id)}
-  //       position={index}
-  //     >
-  //       <IndexTable.Cell>
-  //         <p variant="bodyMd" fontWeight="bold" as="span">
-  //           {title}
-  //         </p>
-  //       </IndexTable.Cell>
-  //       <IndexTable.Cell>{category}</IndexTable.Cell>
-  //       <IndexTable.Cell>{price}</IndexTable.Cell>
-  //       <IndexTable.Cell>{discountPercentage}</IndexTable.Cell>
-  //       <IndexTable.Cell>{rating}</IndexTable.Cell>
-  //       <IndexTable.Cell>{stock}</IndexTable.Cell>
-  //       <IndexTable.Cell>{brand}</IndexTable.Cell>
-  //     </IndexTable.Row>
-  //   ),
-  // );
+
   const rowMarkup = user?.map(
     ({ id, title, thumbnail, vendor, published_scope }, index) => (
       <IndexTable.Row
